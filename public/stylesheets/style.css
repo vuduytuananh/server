@@ -156,7 +156,10 @@ stick*/
 nav {
   margin: 0px !important;
 }
-
+.city-item {
+  font-size: 18px;
+  color: #08A650 !important;
+}
 
 .carousel-control.right, .carousel-control.left {
     background-image: none;
