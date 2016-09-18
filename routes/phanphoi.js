@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
 router.get('/hanoi', function(req, res, next) {
   res.render('phanphoi_hanoi');
 });
+router.get('/hcm', function(req, res, next) {
+  res.render('phanphoi_hcm');
+});
 router.get('/haiduong', function(req, res, next) {
   res.render('phanphoi_haiduong');
 });
