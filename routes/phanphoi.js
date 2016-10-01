@@ -8,6 +8,9 @@ router.get('/', function(req, res, next) {
 router.get('/hanoi', function(req, res, next) {
   res.render('phanphoi_hanoi');
 });
+router.get('/danang', function(req, res, next) {
+  res.render('phanphoi_danang');
+});
 router.get('/hcm', function(req, res, next) {
   res.render('phanphoi_hcm');
 });
@@ -25,6 +28,9 @@ router.get('/quangninh', function(req, res, next) {
 });
 router.get('/hanam', function(req, res, next) {
   res.render('phanphoi_hanam');
+});
+router.get('/hatinh', function(req, res, next) {
+  res.render('phanphoi_hatinh');
 });
 router.get('/bacninh', function(req, res, next) {
   res.render('phanphoi_bacninh');
@@ -46,6 +52,15 @@ router.get('/phutho', function(req, res, next) {
 });
 router.get('/ninhbinh', function(req, res, next) {
   res.render('phanphoi_ninhbinh');
+});
+router.get('/quangbinh', function(req, res, next) {
+  res.render('phanphoi_quangbinh');
+});
+router.get('/quangnam', function(req, res, next) {
+  res.render('phanphoi_quangnam');
+});
+router.get('/quangngai', function(req, res, next) {
+  res.render('phanphoi_quangngai');
 });
 router.get('/hoabinh', function(req, res, next) {
   res.render('phanphoi_hoabinh');
