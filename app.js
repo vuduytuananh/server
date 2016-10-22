@@ -12,7 +12,8 @@ var banghepatio = require('./routes/banghepatio');
 var phanphoi = require('./routes/phanphoi');
 var lienhe = require('./routes/lienhe');
 var sitemap = require('./routes/sitemap');
-
+var banghekite = require('./routes/banghekite');
+var catalogue = require('./routes/catalogue');
 var app = express();
 
 // view engine setup
@@ -34,6 +35,8 @@ app.use('/ban-ghe-patio', banghepatio);
 app.use('/phanphoi', phanphoi);
 app.use('/lienhe', lienhe);
 app.use('/sitemap', sitemap);
+app.use('/ban-ghe-kite', banghekite);
+app.use('/catalogue', catalogue);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

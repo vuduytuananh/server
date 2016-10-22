@@ -11,6 +11,9 @@ router.get('/hanoi', function(req, res, next) {
 router.get('/danang', function(req, res, next) {
   res.render('phanphoi_danang');
 });
+router.get('/langson', function(req, res, next) {
+  res.render('phanphoi_langson');
+});
 router.get('/hcm', function(req, res, next) {
   res.render('phanphoi_hcm');
 });
