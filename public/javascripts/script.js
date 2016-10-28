@@ -53,6 +53,7 @@ var validateNotValid = function(){
   }
 //end form validation
   $('#submit_button').click(function(){
+    goog_report_conversion(undefined);
     var nameNotEmpty = validateNotEmpty($("#name"));
     var phoneNotEmpty = validateNotEmpty($("#phone"));
     var messageNotEmpty = validateNotEmpty($("#message"));
