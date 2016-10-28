@@ -12,33 +12,11 @@
     <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header" id="togbar">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><img src="images/plain_logo.png" height="110px" alt="" id="top_left_logo"/></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <img src="images/top_right.png" height="180px" id="top_right_markup"/>
-      <ul class="nav navbar-nav" id="links_list">
-        <li class=" menu-item-hover"><a href="/">Trang chủ</a></li>
-        <li class="menu-item-hover"><a href="/ban-ghe-kite">Kite</a></li>
-        <li class="menu-item-hover"><a href="/ban-ghe-patio">Patio</a></li>
-        <li class=" menu-item-hover"><a href="/phanphoi">Nhà phân phối</a></li>
-        <li class="current_page  menu-item-hover"><a href="/lienhe">Liên hệ</a></li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
+    <%- include('navbar',{current_page:"contact"});%>
 <section>
 <div class="container">
   <h1 style="color: #08A650" class="text-center">Công ty Cổ phần Ngoại Thất Fansipan</h1>
-  <div class="row">
+  <div class="row" style="margin-top: 40px;">
     <div class="col-xs-12 col-sm-6">
       <div class="row">
         <div class="col-xs-12">
@@ -60,15 +38,39 @@
         </div>
       </div>
     </div>
-    <br><br>
-    <div class="col-xs-12  col-sm-6">
-        <iframe
-  width="600"
-  height="450"
-  frameborder="0" style="border:0"
-  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_gbgoWwOu4nCKDuPXHj8Ej3xEzWGkgXU
-    &amp;q=Cong+Ty+Co+Phan+Ngoai+That+Fansipan">
-</iframe>
+    <div class="col-xs-12 col-sm-5 col-sm-offset-1" style="margin-top: 30px;">
+      <form id="contact_form">
+        <div class="form-group">
+          <label for="name">Họ tên:</label>
+          <input type="text" class="form-control" placeholder="Nhập họ và tên" aria-describedby="inputError1Status" id="name"/>
+          <span class="glyphicon glyphicon-remove form-control-feedback nodisplay" aria-hidden="true" ></span>
+          <span id="helpBlockName" class="help-block empty nodisplay">Vui lòng nhập đầy đủ họ tên</span>
+          <span id="inputError1Status" class="sr-only">(error)</span>
+        </div>
+        <div class="form-group">
+          <label for="phone_number">Số điện thoại:</label>
+          <input type="tel" class="form-control" placeholder="Nhập số điện thoại" aria-describedby="inputError2Status" id="phone"/>
+          <span class="glyphicon glyphicon-remove form-control-feedback nodisplay" aria-hidden="true" ></span>
+          <span id="helpBlockPhoneBlank" class="help-block empty nodisplay">Vui lòng nhập số điện thoại liên hệ</span>
+          <span id="helpBlockPhoneInvalid" class="help-block wrong nodisplay">Vui lòng nhập số điện thoại hợp lệ</span>
+          <span id="inputError2Status" class="sr-only">(error)</span>
+        </div>
+        <div class="form-group">
+          <label for="message">Lời nhắn:</label>
+          <textarea type="text" class="form-control" rows = "8" placeholder="Tin nhắn gửi Ngoại thất Fansipan" aria-describedby="inputError3Status" id="message"></textarea>
+          <span class="glyphicon glyphicon-remove form-control-feedback nodisplay" aria-hidden="true" ></span>
+          <span id="helpBlockMessage" class="help-block empty nodisplay">Vui lòng nhập tin nhắn</span>
+          <span id="inputError3Status" class="sr-only">(error)</span>
+        </div>
+      </form>
+      <button type ="submit" class="btn btn-default btn-success" id="submit_button">Gửi</button>
+      <span id="status" class="help-block"></span>
+    </div>
+    <div class="col-xs-12">
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 40px;">
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC_gbgoWwOu4nCKDuPXHj8Ej3xEzWGkgXU
+          &amp;q=Cong+Ty+Co+Phan+Ngoai+That+Fansipan"></iframe>
+      </div>
     </div>
   </div>
 </div>

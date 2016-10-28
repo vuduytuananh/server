@@ -5,6 +5,9 @@ var router = express.Router();
 router.get('/', function(req, res, next) {
   res.render('phanphoi');
 });
+router.get('/test', function(req, res, next) {
+  res.render('phanphoi_template',{province:"TEST"});
+});
 router.get('/hanoi', function(req, res, next) {
   res.render('phanphoi_hanoi');
 });

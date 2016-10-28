@@ -14,29 +14,7 @@
     <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header" id="togbar">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/"><img src="images/plain_logo.png" height="110px" alt="logo của Ngoại thất Fansipan" id="top_left_logo"/></a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <img src="images/top_right.png" height="180px" id="top_right_markup"/>
-      <ul class="nav navbar-nav" id="links_list">
-        <li class="current_page menu-item-hover"><a href="/" style="">Trang chủ</a></li>
-        <li class="menu-item-hover"><a href="/ban-ghe-kite">Kite</a></li>
-        <li class="menu-item-hover"><a href="/ban-ghe-patio">Patio</a></li>
-        <li class="menu-item-hover"><a href="/phanphoi">Nhà phân phối</a></li>
-        <li class="menu-item-hover"><a href="/lienhe">Liên hệ</a></li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
+    <%- include("navbar",{current_page:"home"}); %>
 <section>
   <article>
 <div class="container-fluid no-margin">
@@ -113,31 +91,7 @@
 </div>
 </article>
 </section>
-<div class="container-fluid footer-container">
-  <div class="container">
-    <h4 style="color: #08A650">Công ty Cổ phần Ngoại Thất Fansipan</h4>
-    <div class="row">
-      <div class="col-sm-5 col-xs-12">
-        <h5>Văn phòng</h5>
-        <p>Trụ sở chính: <em>Số 45 - Tỉnh lộ 392 - Tráng Liệt - Bình Giang - Hải Dương</em></p>
-        <p>Chi nhánh miền Nam: <em>E4/ 52 quốc lộ 1A - phường Bình Trị Đông B - quận Bình Tân - TP Hồ Chí Minh</em></p>
-      </div>
-      <div class="col-sm-4 col-xs-12">
-        <h5>Nhà máy</h5>
-        <p>Địa chỉ: <em>Km 18 - Tỉnh lộ 394 - Tân Hồng - Bình Giang - Hải Dương</em></p>
-      </div>
-      <div class="col-sm-3 col-xs-12">
-        <h5>Liên hệ</h5>
-        <p><span class="glyphicon glyphicon-phone-alt"></span> Telephone: <em>03203 776 269</em></p>
-        <p><span class="glyphicon glyphicon-phone"></span> Mobile Phone: <em>0936 258 088</em></p>
-        <p><span class="glyphicon glyphicon-print"></span> Fax: <em>03203 799 309</em></p>
-        <p><span class="glyphicon glyphicon-envelope"></span> Email: <em>ngoaithatfansipan@gmail.com</em></p>
-        <p><img src="/images/fb.png" width="18px"alt=""/> Facebook: <a href="https://www.facebook.com/ngoaithatfansipan/">ngoaithatfansipan</a></p>
-      </div>
-    </div>
-    <footer class="text-center" style="margin-bottom: 5px; color: #aaa;">Copyright © 2016 Ngoai that Fansipan Joint-stock Company. All rights reserved.</footer>
-  </div>
-</div>
+<%- include('footer');%>
 </body>
   <script type="text/javascript" src="javascripts/script.js"></script>
   <script>
