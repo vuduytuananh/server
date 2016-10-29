@@ -1,6 +1,12 @@
 
 
 $(document).ready(function(){
+  //set left-right center of the carousel-control
+
+  //end set left-right center of the carousel-control
+
+
+
   // class="menu-item-hover"
   $(".menu-item-hover").hover(function(){
     $(this).addClass("hovered-menu");
@@ -51,6 +57,8 @@ var validateNotValid = function(){
       return false;
     }
   }
+
+
 //end form validation
   $('#submit_button').click(function(){
     goog_report_conversion(undefined);

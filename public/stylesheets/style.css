@@ -11,6 +11,16 @@
 .nodisplay{
   display: none;
 }
+.left-navi{
+  position: absolute !important;
+  left: 50px !important;
+  top: 50% !important;
+}
+.right-navi{
+  position: absolute !important;
+  right: 50px !important;
+  top: 50% !important;
+}
 .album{
   height: 250px;
   overflow: hidden;
@@ -235,6 +245,7 @@ stick*/
 }
 .no-margin {
   margin: 0px !important;
+  margin-top: 10px !important;
   padding: 0px;
 }
 .current_page , .hovered-menu{
@@ -256,12 +267,14 @@ nav {
   font-size: 18px;
   color: #08A650 !important;
 }
-
+.carousel-control{
+  position: static !important;
+  height: inherit;
+}
 .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #08A650;
 }
-
 .carousel-indicators li {
     border-color: #08A650;
 }
@@ -288,11 +301,16 @@ nav {
   }
 }
 @media (max-width: 992px){
+  .left-navi{
+    top: 45% !important;
+  }
+  .right-navi{
+    top: 45% !important;
+  }
   .photos-container{
     margin-left: 20%!important;
     margin-top: 35px !important;
   }
-
   /*MODAL START*/
   .modal-content {
         width: 100%;
@@ -335,7 +353,7 @@ nav {
     height: 100px;
   }
   #myNavbar{
-    margin-left: 180px;
+    margin-left: 260px;
   }
   #top_right_markup{
     height: 120px;
@@ -352,6 +370,12 @@ nav {
 
 }
 @media (max-width: 768px) {
+  .left-navi{
+    top: 30% !important;
+  }
+  .right-navi{
+    top: 30% !important;
+  }
   .part4{
     padding-bottom: 20%;
   }

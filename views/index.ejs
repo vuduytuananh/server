@@ -14,56 +14,122 @@
     <link rel="stylesheet" href="stylesheets/style.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <%- include("navbar",{current_page:"home"}); %>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+    <div class="navbar-header" id="togbar">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/"><img src="/images/plain_logo.png" height="110px" alt="logo của Ngoại thất Fansipan" id="top_left_logo"/></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <img src="images/top_right.png" height="180px" id="top_right_markup"/>
+      <ul class="nav navbar-nav" id="links_list">
+        <%# Home page%>
+        <li <%if(current_page == "home"){%>
+            <%- 'class= "menu-item-hover current_page"' %>
+        <%}else{%>
+            <%- 'class="menu-item-hover"' %>
+          <%}%> >
+          <a href="/">Trang chủ</a>
+        </li>
+        <%# End Home page %>
+
+        <%# Kite%>
+        <li <%if(current_page == "kite"){%>
+            <%- 'class= "menu-item-hover current_page"' %>
+        <%}else{%>
+            <%- 'class="menu-item-hover"' %>
+          <%}%> >
+          <a href="/ban-ghe-kite">Kite</a>
+        </li>
+        <%# End Kite%>
+
+        <%# Patio%>
+        <li <%if(current_page == "patio"){%>
+            <%- 'class= "menu-item-hover current_page"' %>
+        <%}else{%>
+            <%- 'class="menu-item-hover"' %>
+          <%}%> >
+          <a href="/ban-ghe-patio">Patio</a>
+        </li>
+        <%# End Patio%>
+
+        <%# Retailers%>
+        <li <%if(current_page == "retailers"){%>
+            <%- 'class= "menu-item-hover current_page"' %>
+        <%}else{%>
+            <%- 'class="menu-item-hover"' %>
+          <%}%> >
+          <a href="/phanphoi">Phân Phối</a>
+        </li>
+        <%# End Retailer%>
+
+        <%# Contact%>
+        <li <%if(current_page == "contact"){%>
+            <%- 'class= "menu-item-hover current_page"' %>
+        <%}else{%>
+            <%- 'class="menu-item-hover"' %>
+          <%}%> >
+          <a href="/lienhe">Liên Hệ</a>
+        </li>
+        <%# End Contact%>
+      </ul>
+    </div>
+    </div>
+    </nav>
 <section>
   <article>
 <div class="container-fluid no-margin">
-<div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-  </ol>
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner" role="listbox">
-    <div class="item active item1">
-      <h1 style="color: #08A650">Bộ bàn ghế Kite</h1>
-      <h4 style="color: #FAAE1B; margin: 0;">Thiết kế mềm mại - Kết cấu vững chắc</h4>
-      <a href="/ban-ghe-kite">
-      <div class="row">
-        <div class="col-xs-8 col-xs-offset-2">
-      <img alt="Bộ bàn ghế Kite của Ngoại thất Fansipan dùng cho quán cafe, nhà hàng, sân vườn" src="images/kite_slide.jpg" class="img img-responsive" alt="" />
-      </div>
-      </div>
-      </a>
-    </div>
-    <div class="item item2">
-      <h1 style="color: #08A650">Bộ bàn ghế Patio</h1>
-      <h4 style="color: #FAAE1B; margin: 0;">Sang trọng - Tinh tế - Hiện đại</h4>
-      <a href="/ban-ghe-patio">
-        <div class="row">
-          <div class="col-xs-8 col-xs-offset-2">
-            <img alt="Bộ bàn ghế Patio của Ngoại thất Fansipan dùng cho quán cafe, nhà hàng, sân vườn" src="images/slide_1.png" class="img img-responsive" alt="" />
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+          <div class="item active item1">
+            <h1 style="color: #08A650">Kite</h1>
+            <h4 style="color: #FAAE1B; margin: 0;">Thiết kế mềm mại - Kết cấu vững chắc</h4>
+            <a href="/ban-ghe-kite">
+            <div class="row">
+              <div class="col-xs-8 col-xs-offset-2">
+            <img alt="Bộ bàn ghế Kite của Ngoại thất Fansipan dùng cho quán cafe, nhà hàng, sân vườn" src="images/kite_slide.jpg" class="img img-responsive" alt="" />
+            </div>
+            </div>
+            </a>
           </div>
-        </div>
-    </a>
-        </div>
-      </div>
+          <div class="item item2">
+            <h1 style="color: #08A650">Patio</h1>
+            <h4 style="color: #FAAE1B; margin: 0;">Sang trọng - Tinh tế - Hiện đại</h4>
+            <a href="/ban-ghe-patio">
+              <div class="row">
+                <div class="col-xs-8 col-xs-offset-2">
+                  <img alt="Bộ bàn ghế Patio của Ngoại thất Fansipan dùng cho quán cafe, nhà hàng, sân vườn" src="images/slide_1.png" class="img img-responsive" alt="" />
+                </div>
+              </div>
+          </a>
+              </div>
+            </div>
+          </div>
     </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" style="background-color: red;">
+      <span class="glyphicon glyphicon-chevron-left left-navi" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next" style="background-color: red;">
+        <span class="glyphicon glyphicon-chevron-right right-navi" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
   </div>
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>
+    <!-- Left and right controls -->
+  </div>
 <div class="container">
 <div class="row">
   <div class="col-xs-6 col-sm-3">
