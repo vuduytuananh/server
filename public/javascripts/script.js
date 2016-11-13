@@ -4,7 +4,9 @@ $(document).ready(function(){
   //set left-right center of the carousel-control
 
   //end set left-right center of the carousel-control
-
+  $(".navbar-toggle").click(function(){
+    $(".carousel-control").toggle();
+  });
 
 
   // class="menu-item-hover"
@@ -118,21 +120,6 @@ var validateNotValid = function(){
   $("#message").focus(function(){
     removeIfFocus($("#message"));
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //start modal code
 // Get the modal
